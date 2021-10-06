@@ -3,9 +3,7 @@
 import java.util.*;
 
 
-//import static org.junit.jupiter.api.Assertions.assertEquals;
-
-//import org.junit.Test;
+import org.junit.Test;
 
 class Node{
 
@@ -191,5 +189,28 @@ m.Createtree();
 
 }
 
+
+
+@Test
+public void testLCA(){
+
+Main m = new Main();
+m.Create(10);
+m.Create(10);
+m.Create(10);
+m.Create(10);
+m.Create(10);
+m.Create(10);
+m.Create(10);
+m.Create(10);
+m.Create(10);
+m.Create(10);
+m.Create(10);
+
+Node r;
+r=LCA(10,0);
+assertEquals(0,r.d);
 }
+}
+
 
