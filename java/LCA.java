@@ -15,6 +15,38 @@ class Node{
 
 }
 class Main{
+
+public 
+Node r;
+Node n;
+
+    void Insert(int item){
+
+        Node temp=new Node(item);
+    
+        if (r) {root = temp; return;}
+    
+        Node *prev, *cur;
+        prev=NULL;
+        cur=root;
+        while(cur)            /* traverse until correct position is found*/
+        {
+            prev=cur;
+            if (item==cur->data ){
+                cout<<"Duplicates Not allowed\n";
+                delete temp;
+                return;
+            }
+            else if (item<cur->data)
+                    cur=cur->lchild;
+                 else
+                    cur=cur->rchild;
+        }
+        if (item<prev->data)
+            prev->lchild = temp;
+        else
+            prev->rchild = temp;
+        return;
     static class NW
         {
             public Node n;
