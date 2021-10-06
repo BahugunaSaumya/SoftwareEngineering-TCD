@@ -104,7 +104,7 @@ static Node r = null;
     }
 
     Node Create(int item){
-        int x,c;
+        int x;
         Node temp=new Node(item);
 
         
@@ -113,10 +113,8 @@ static Node r = null;
             if (r == null)
             {r = temp; }
        
-    
             System.out.println("Enter next item after "+item+" ");
             x=sc.nextInt();
-        
             Node v=Insert(x);
              if(v!=null){
                   
@@ -138,7 +136,7 @@ static Node r = null;
             return null;
             
         }
-
+    
 
         return null;
      
@@ -161,8 +159,7 @@ static Node r = null;
          System.out.println(" Enter 0 to EXIT!!");
            int t= sc.nextInt();
          while(t!=0){ 
-            System.out.println(" Enter 0 to EXIT!!");
-            t=sc.nextInt();
+            
          System.out.println("Enter the nodes to be checked");
         
          a=sc.nextInt();  
@@ -176,6 +173,8 @@ static Node r = null;
         else {
             System.out.println("No Lowest ancestor found");
         }
+        System.out.println(" Enter 0 to EXIT!!");
+            t=sc.nextInt();
         
     }return;
     
