@@ -46,12 +46,12 @@ static Node r,n;
                     cur=cur.l;
                  else
                     cur=cur.ri;
-        
+        }
         if (item<prev.d)
             prev.l = temp;
         else
             prev.ri = temp;
-        }
+        
         return null;
     }
    public static boolean Search (int item){
@@ -112,32 +112,26 @@ static Node r,n;
         //Node y;
         if (item>0)
         {
-            Node temp = new Node(item);
+            
     
             System.out.println("Enter the lchild of "+item+" ");
             x=sc.nextInt();
         
-            temp.l = Insert(x);
+             Insert(x);
+             Create(x);
             System.out.println("Enter the rchild of "+item+" ");
             x=sc.nextInt();
-            temp.ri = Insert(x);
-            return temp;
-        }
-        System.out.println("Enter the nodes to be checked");
-        int a,b;
-        a=sc.nextInt();
-        b=sc.nextInt();
-        Node lca =LCA(a,b);
-        if(lca!=null){
-            System.out.println("Lowest common ancestor is =" +lca.d);
-        }
-
-        else {
-            System.out.println("No Lowest ancestor found");
+            Insert(x);
+            Create(x);
+            return null;
+            
         }
 
 
         return null;
+     
+
+        
     
     
     }
@@ -149,7 +143,21 @@ static Node r,n;
         int item;
         System.out.println("Creating the Binary search tree , enter appropriate values: ");
         item=sc.nextInt();
-        r=Create(item);
+        Create(item);
+        System.out.println("Enter the nodes to be checked");
+        int a,b;
+        a=sc.nextInt();
+        b=sc.nextInt();
+        Node lca =LCA(a,b);
+        if(lca!=null){
+            System.out.println("Lowest common ancestor is = " +lca.d);
+        }
+
+        else {
+            System.out.println("No Lowest ancestor found");
+        }
+
+
     }
 /*
 
