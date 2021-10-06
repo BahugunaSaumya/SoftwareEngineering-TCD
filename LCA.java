@@ -23,24 +23,23 @@ class Main{
 
 public
 Scanner sc =new Scanner(System.in); 
-static Node r,n;
+static Node r = null;
 
     public static Node Insert(int item){
 
         Node temp=new Node(item);
     
-        if (r == null) {r = temp;}
+        if (r == null)
+         {r = temp;}
     
         Node prev, cur;
         prev=null;
         cur=r;
-        while(cur!=null
-        )            /* traverse until correct position is found*/
+        while(cur!=null)            /* traverse until correct position is found*/
         {
             prev=cur;
             if (item==cur.d && item!=0){
                 System.out.println("Duplicates Not allowed");
-                temp=null;
                 return null;
             }
             else if (item<cur.d)
@@ -115,12 +114,12 @@ static Node r,n;
         {
             
     
-            System.out.println("Enter the lchild of "+item+" ");
+            System.out.println("Enter next item after "+item+" ");
             x=sc.nextInt();
         
              Insert(x);
              Create(x);
-            System.out.println("Enter the rchild of "+item+" ");
+            System.out.println("Enter next item after "+item+" ");
             x=sc.nextInt();
             Insert(x);
             Create(x);
