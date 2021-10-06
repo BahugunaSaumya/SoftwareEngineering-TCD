@@ -34,10 +34,11 @@ static Node r,n;
         Node prev, cur;
         prev=null;
         cur=r;
-        while(cur!=null)            /* traverse until correct position is found*/
+        while(cur!=null
+        )            /* traverse until correct position is found*/
         {
             prev=cur;
-            if (item==cur.d ){
+            if (item==cur.d && item!=0){
                 System.out.println("Duplicates Not allowed");
                 temp=null;
                 return null;
