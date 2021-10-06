@@ -114,10 +114,7 @@ public static void main(String[] args)
     FindLCA(r, r.ri.l.l, r.ri.l);
     FindLCA(r, r.l, r.ri.l);
 }
-@Test
-public void testFindLCA()
-{
-    assertEquals(expected, actual, message);
+// this is just to test the auto Commit feature
 }
 {
 
