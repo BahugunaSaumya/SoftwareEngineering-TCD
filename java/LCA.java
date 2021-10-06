@@ -1,3 +1,5 @@
+package java;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -17,36 +19,36 @@ class Node{
 class Main{
 
 public 
-Node r;
-Node n;
+static Node r,n;
 
-    void Insert(int item){
+    public static Node Insert(int item){
 
         Node temp=new Node(item);
     
-        if (r) {root = temp; return;}
+        if (r == null) {r = temp;}
     
-        Node *prev, *cur;
-        prev=NULL;
-        cur=root;
-        while(cur)            /* traverse until correct position is found*/
+        Node prev, cur;
+        prev=null;
+        cur=r;
+        while(cur!=null)            /* traverse until correct position is found*/
         {
             prev=cur;
-            if (item==cur->data ){
-                cout<<"Duplicates Not allowed\n";
-                delete temp;
-                return;
+            if (item==cur.d ){
+                System.out.println("Duplicates Not allowed");
+                temp=null;
             }
-            else if (item<cur->data)
-                    cur=cur->lchild;
+            else if (item<cur.d)
+                    cur=cur.l;
                  else
-                    cur=cur->rchild;
+                    cur=cur.ri;
         }
-        if (item<prev->data)
-            prev->lchild = temp;
+        if (item<prev.d)
+            prev.l = temp;
         else
-            prev->rchild = temp;
-        return;
+            prev.ri = temp;
+    
+    }
+}
     static class NW
         {
             public Node n;
