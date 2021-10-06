@@ -1,11 +1,11 @@
-package java;
+
 
 import java.util.*;
 
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+//import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+//import org.junit.Test;
 
 class Node{
 
@@ -46,14 +46,15 @@ static Node r,n;
                     cur=cur.l;
                  else
                     cur=cur.ri;
-        }
+        
         if (item<prev.d)
             prev.l = temp;
         else
             prev.ri = temp;
-    
+        }
+        return null;
     }
-   public static boolean Search(int item){
+   public static boolean Search (int item){
         Node temp = r;
         while(temp != null)
         {
@@ -67,8 +68,9 @@ static Node r,n;
                 else{
                     temp=temp.ri; }
         }
-        return false;
+       
     }
+        return false;
 }
     public static Node LCA(int x, int y)
     {
@@ -107,7 +109,7 @@ static Node r,n;
 
     Node Create(int item){
         int x;
-        Node y;
+        //Node y;
         if (item>0)
         {
             Node temp = new Node(item);
@@ -121,6 +123,20 @@ static Node r,n;
             temp.ri = Insert(x);
             return temp;
         }
+        System.out.println("Enter the nodes to be checked");
+        int a,b;
+        a=sc.nextInt();
+        b=sc.nextInt();
+        Node lca =LCA(a,b);
+        if(lca!=null){
+            System.out.println("Lowest common ancestor is =" +lca.d);
+        }
+
+        else {
+            System.out.println("No Lowest ancestor found");
+        }
+
+
         return null;
     
     
@@ -128,7 +144,7 @@ static Node r,n;
 
 
 
-    void CreateBst(){
+    void Createtree(){
 
         int item;
         System.out.println("Creating the Binary search tree , enter appropriate values: ");
@@ -216,6 +232,15 @@ public static boolean FindLCA( Node r, NW lca, Node x, Node y)
 public static void main(String[] args)
 {
 
+Main m = new Main();
+
+m.Createtree();
+
+
+
+
+    /*
+
     Node r = new Node(55);
     r.l = new Node(22);
     r.ri = new Node(66);
@@ -232,9 +257,7 @@ public static void main(String[] args)
     FindLCA(r, r.l, r.ri.l);
 }
 // this is just to test the auto Commit feature
-}
-{
-
+*/
 }
 
 }
