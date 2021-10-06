@@ -53,7 +53,7 @@ static Node r = null;
         else
             prev.ri = temp;
         
-        return null;
+        return temp;
     }
    public static boolean Search (int item){
         Node temp = r;
@@ -109,7 +109,7 @@ static Node r = null;
     }
 
     Node Create(int item){
-        int x;
+        int x,c;
         Node temp=new Node(item);
 
         //Node y;
@@ -122,8 +122,14 @@ static Node r = null;
             System.out.println("Enter next item after "+item+" ");
             x=sc.nextInt();
         
-             Insert(x);
-             Create(x);
+            Node v=Insert(x);
+             if(v!=null){
+                  c=x;
+                Create(x);
+             }
+             else{
+                 
+             }
             System.out.println("Enter next item after "+item+" ");
             x=sc.nextInt();
             Insert(x);
@@ -156,8 +162,9 @@ static Node r = null;
            
       
          System.out.println("Enter the nodes to be checked");
-        a=sc.nextInt();
-      
+        
+         a=sc.nextInt();  
+         while(a!=0){   
         b=sc.nextInt();
         Node lca =LCA(a,b);
         if(lca!=null){
@@ -168,6 +175,8 @@ static Node r = null;
             System.out.println("No Lowest ancestor found");
         }
     }
+    
+
 
     }
 /*
