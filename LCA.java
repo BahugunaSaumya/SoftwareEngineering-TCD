@@ -110,10 +110,14 @@ static Node r = null;
 
     Node Create(int item){
         int x;
+        Node temp=new Node(item);
+
         //Node y;
         if (item>0)
         {
-            
+            if (r == null)
+            {r = temp; }
+       
     
             System.out.println("Enter next item after "+item+" ");
             x=sc.nextInt();
@@ -143,8 +147,8 @@ static Node r = null;
 
         int item;
         System.out.println("Creating the Binary search tree , enter appropriate values: ");
-        item=sc.nextInt();
-        0
+        item =sc.nextInt();
+        //Insert(item);
         Create(item);
         System.out.println("Enter the nodes to be checked");
         int a,b;
