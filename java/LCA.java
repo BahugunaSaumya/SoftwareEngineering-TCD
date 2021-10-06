@@ -48,7 +48,68 @@ static Node r,n;
             prev.ri = temp;
     
     }
+   public static boolean Search(int item){
+        Node temp = r;
+        while(temp != null)
+        {
+            if (temp.d == item)
+                { return true;}
+            else
+            {
+                if (item<temp.d)
+                
+                temp=temp.l;
+                else{
+                    temp=temp.ri; }
+        }
+        return false;
+    }
 }
+    public static Node LCA(int x, int y)
+    {
+        // return if the tree is empty or `x` or `y` is not present
+        // in the tree
+        if (r == null || !Search(x) || !Search(y)) {
+            return null;
+        }
+ 
+        // start from the root node
+        Node curr = r;
+ 
+        // traverse the tree
+        while (curr != null)
+        {
+            // if both `x` and `y` is smaller than the root, LCA exists in the
+            // left subtree
+            if (curr.d > Integer.max(x, y)) {
+                curr = curr.l;
+            }
+ 
+            // if both `x` and `y` are greater than the root, LCA exists in the
+            // right subtree
+            else if (curr.d < Integer.min(x, y)) {
+                curr = curr.ri;
+            }
+ 
+            // if one key is greater (or equal) than the root and one key is
+            // smaller (or equal) than the root, then the current node is LCA
+            else {
+                return curr;
+            }
+        }
+        return curr;
+    }
+
+
+    void CreateBst(){
+
+        int item;
+        System.out.println("Creating the Binary search tree , enter appropriate values: ");
+        item=sc.nextInt;
+        r=Create(item);
+    }
+
+/*
     static class NW
         {
             public Node n;
@@ -127,7 +188,7 @@ public static boolean FindLCA( Node r, NW lca, Node x, Node y)
  
 
 
-
+*/
 
 
 public static void main(String[] args)
