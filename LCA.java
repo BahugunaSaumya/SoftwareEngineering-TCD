@@ -146,13 +146,18 @@ static Node r = null;
     void Createtree(){
 
         int item;
+       
         System.out.println("Creating the Binary search tree , enter appropriate values: ");
         item =sc.nextInt();
         //Insert(item);
         Create(item);
-        System.out.println("Enter the nodes to be checked");
         int a,b;
+         System.out.println(" Enter 0 to EXIT!!");
+           
+      
+         System.out.println("Enter the nodes to be checked");
         a=sc.nextInt();
+      
         b=sc.nextInt();
         Node lca =LCA(a,b);
         if(lca!=null){
@@ -162,7 +167,7 @@ static Node r = null;
         else {
             System.out.println("No Lowest ancestor found");
         }
-
+    }
 
     }
 /*
