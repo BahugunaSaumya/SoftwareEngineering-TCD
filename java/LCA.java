@@ -1,5 +1,8 @@
 package java;
 
+import java.util.*;
+
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -18,7 +21,8 @@ class Node{
 }
 class Main{
 
-public 
+public
+Scanner sc =new Scanner(System.in); 
 static Node r,n;
 
     public static Node Insert(int item){
@@ -36,6 +40,7 @@ static Node r,n;
             if (item==cur.d ){
                 System.out.println("Duplicates Not allowed");
                 temp=null;
+                return null;
             }
             else if (item<cur.d)
                     cur=cur.l;
@@ -100,25 +105,46 @@ static Node r,n;
         return curr;
     }
 
+    Node Create(int item){
+        int x;
+        Node y;
+        if (item>0)
+        {
+            Node temp = new Node(item);
+    
+            System.out.println("Enter the lchild of "+item+" ");
+            x=sc.nextInt();
+        
+            temp.l = Insert(x);
+            System.out.println("Enter the rchild of "+item+" ");
+            x=sc.nextInt();
+            temp.ri = Insert(x);
+            return temp;
+        }
+        return null;
+    
+    
+    }
+
+
 
     void CreateBst(){
 
         int item;
         System.out.println("Creating the Binary search tree , enter appropriate values: ");
-        item=sc.nextInt;
+        item=sc.nextInt();
         r=Create(item);
     }
-
 /*
+
     static class NW
         {
             public Node n;
             NW(Node n){
             this.n=n;
-        
             }
-        }
-    
+        
+
  public static boolean Nodecheck( Node r, Node n)
  {
      if(r==null)
@@ -185,12 +211,8 @@ public static boolean FindLCA( Node r, NW lca, Node x, Node y)
             System.out.print("LCA does not exist\n");
         }
     }
- 
-
 
 */
-
-
 public static void main(String[] args)
 {
 
