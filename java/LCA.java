@@ -1,4 +1,4 @@
-
+import org.junit.Test;
 
 class Node{
 
@@ -112,7 +112,14 @@ public static void main(String[] args)
     FindLCA(r, r.ri.l.l, r.ri.l);
     FindLCA(r, r.l, r.ri.l);
 }
+@Test
+public void testFindLCA()
+{
+    
+}
+{
 
+}
 
 }
 
