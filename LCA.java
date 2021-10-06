@@ -40,6 +40,7 @@ static Node r = null;
             prev=cur;
             if (item==cur.d && item!=0){
                 System.out.println("Duplicates Not allowed");
+                temp=null;
                 return null;
             }
             else if (item<cur.d)
@@ -143,6 +144,7 @@ static Node r = null;
         int item;
         System.out.println("Creating the Binary search tree , enter appropriate values: ");
         item=sc.nextInt();
+        0
         Create(item);
         System.out.println("Enter the nodes to be checked");
         int a,b;
