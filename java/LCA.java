@@ -1,3 +1,5 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.Test;
 
 class Node{
@@ -115,7 +117,7 @@ public static void main(String[] args)
 @Test
 public void testFindLCA()
 {
-    
+    assertEquals(expected, actual, message);
 }
 {
 
