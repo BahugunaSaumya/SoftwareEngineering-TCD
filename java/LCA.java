@@ -1,9 +1,8 @@
+package java;
 
 
 import java.util.*;
 
-
-import org.junit.Test;
 
 class Node{
 
@@ -187,30 +186,7 @@ Main m = new Main();
 
 m.Createtree();
 
+
 }
 
-
-
-@Test
-public void testLCA(){
-
-Main m = new Main();
-m.Create(10);
-m.Create(10);
-m.Create(10);
-m.Create(10);
-m.Create(10);
-m.Create(10);
-m.Create(10);
-m.Create(10);
-m.Create(10);
-m.Create(10);
-m.Create(10);
-
-Node r;
-r=LCA(10,0);
-assertEquals(0,r.d);
 }
-}
-
-
