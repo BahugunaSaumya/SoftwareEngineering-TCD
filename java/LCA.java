@@ -4,7 +4,7 @@ package java;
 import java.util.*;
 
 
-class Node{
+class Node{                                 
 
 
     int d;
@@ -22,8 +22,8 @@ public
 Scanner sc =new Scanner(System.in); 
 static Node r = null;
 
-    public static Node Insert(int item){
-
+    public static Node Insert(int item){            //This function inserts the number by traversing to the left if the number is less than the 
+                                                //root and to right if the number is greater than root regardless of the sequence it is entered in
         Node temp=new Node(item);
     
         if (r == null)
@@ -36,7 +36,7 @@ static Node r = null;
         {
             prev=cur;
             if (item==cur.d && item!=0){
-                System.out.println("Duplicates Not allowed");
+                System.out.println("Duplicates Not allowed");           // it also checks for the duplicate entries
                 temp=null;
                 return null;
             }
@@ -52,7 +52,7 @@ static Node r = null;
         
         return temp;
     }
-   public static boolean Search (int item){
+   public static boolean Search (int item){                              
         Node temp = r;
         while(temp != null)
         {
@@ -100,20 +100,21 @@ static Node r = null;
         return curr;
     }
 
-    Node Create(int item){
+    Node Create(int item){                                     //this function assigns root and calls insert if the item is not zero
         int x;
-        Node temp=new Node(item);
+        Node temp=new Node(item); 
 
-        
+                                                                                     
         if (item>0)
         {
             if (r == null)
             {r = temp; }
        
-            System.out.println("Enter next item after "+item+" ");
+            System.out.println("Enter next item after "+item+" ");                            
             x=sc.nextInt();
             Node v=Insert(x);
-             if(v!=null){
+             if(v!=null){                                             // as the insert function returns null for a duplicate entry 
+                                                                       // this statement recursively calls itself with the non duplicate number 
                   
                 Create(x);
              }
@@ -142,12 +143,9 @@ static Node r = null;
     
     
     }
-
-
-
     void Createtree(){
 
-        int item;
+        int item;                                    // this function is to call the create function to minimize statements in the main function
        
         System.out.println("Creating the Binary search tree , enter appropriate values: ");
         item =sc.nextInt();
@@ -157,10 +155,10 @@ static Node r = null;
            int t= sc.nextInt();
          while(t!=0){ 
             
-         System.out.println("Enter the nodes to be checked");
+         System.out.println("Enter the nodes to be checked");             //}
         
          a=sc.nextInt();  
-           
+                                                                      // these  statemets asks after every call to LCA if the user wans to countinue or exit  
         b=sc.nextInt();
         Node lca =LCA(a,b);
         if(lca!=null){
@@ -171,7 +169,7 @@ static Node r = null;
             System.out.println("No Lowest ancestor found");
         }
         System.out.println(" Enter 0 to EXIT!!");
-            t=sc.nextInt();
+            t=sc.nextInt();                                                  // }
         
     }return;
     
