@@ -100,7 +100,7 @@ static Node r = null;
         return curr;
     }
 
-    Node Create(int item){                                     //this function assigns root and calls insert if the item is not zero
+    Node Create(int item){                                     //This function assigns root and calls insert if the item is not zero
         int x;
         Node temp=new Node(item); 
 
@@ -145,7 +145,7 @@ static Node r = null;
     }
     void Createtree(){
 
-        int item;                                    // this function is to call the create function to minimize statements in the main function
+        int item;                                    // This function is to call the create function to minimize statements in the main function
        
         System.out.println("Creating the Binary search tree , enter appropriate values: ");
         item =sc.nextInt();
@@ -158,7 +158,7 @@ static Node r = null;
          System.out.println("Enter the nodes to be checked");             //}
         
          a=sc.nextInt();  
-                                                                      // these  statemets asks after every call to LCA if the user wans to countinue or exit  
+                                                                      // These  statemets asks after every call to LCA if the user wans to countinue or exit  
         b=sc.nextInt();
         Node lca =LCA(a,b);
         if(lca!=null){
