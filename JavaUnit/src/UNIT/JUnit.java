@@ -85,7 +85,7 @@ public static boolean FindLCA( Node r, NW lca, Node x, Node y)
  
         
         if (lca != null) {
-            System.out.println(lca.d);
+           // System.out.println(lca.d);
         	return lca.d;
             
         }

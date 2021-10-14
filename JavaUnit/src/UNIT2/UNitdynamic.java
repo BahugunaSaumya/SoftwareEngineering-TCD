@@ -6,6 +6,7 @@
 import java.util.Scanner;
 
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 
 
@@ -30,8 +31,8 @@ import org.junit.Test;
       c= sc.nextInt();
   
    Node lca =Main.LCA(a,b);                                                            
-	   assertEquals(c,lca.d);
-       System.out.println("This Tets passed " +c+" is indeed the LCA for the binary search tree");                      // The test keeps on repeating until 0 is entered or the test fails
+	  assertEquals(c,lca.d);
+       System.out.println("This Test passed " +c+" is indeed the LCA for the binary search tree"); // The test keeps on repeating until 0 is entered or the test fails
      System.out.println(" Enter 0 to EXIT!!");
      t=sc.nextInt();
      
