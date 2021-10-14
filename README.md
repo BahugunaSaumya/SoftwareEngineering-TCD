@@ -28,3 +28,10 @@ unit:-
 This branch uses unit testing on the LCA.java code of both the main and the edit1 branch, where the code with binary search tree asks for the nodes and the LCA(according to the user, allowing code to be checked for different nodes).
 unit-testing for the lca.py file is also attempted on this branch.
 (all the codes are in there respective directories with same names).
+
+
+JUNIT --> static input java code
+unittesting -> Unit tes code for JUNIT
+
+LCAdynamic --> It has dynamic input code for LCA
+UnitDynamic --> unit testing for dynamic java
