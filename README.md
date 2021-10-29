@@ -20,4 +20,4 @@ This branch contains the assignment to wrtie a Biography ona Software Engineer,I
 
 DAG:-
 
-This branch contains the DAGtest.java test codes to find LCA and a DCA.java file to implement the function.
+This branch contains the DAGtest.java test codes to find LCA and a DAG.java file to implement the function of finding LCA using a DAG.
