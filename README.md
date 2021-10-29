@@ -24,4 +24,4 @@ This branch contains the DAGtest.java test codes to find LCA and a DAG.java file
 
 I had to implement a completley diffrent code for DAG  as my LCA code used Binary search tree dynamically which is completely useless for DAG in every way.
 
-I have implemented DAG using BFS(Breadth Fisr search)
+I have implemented DAG using BFS(Breadth First Search)
