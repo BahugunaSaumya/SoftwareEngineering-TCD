@@ -8,7 +8,7 @@ This branch has the basic static input code for finding LCA in 2 languages java 
 
 Edit1:-
 
-This branch has a java program to creates a binary search tree using dynamic input and then returns the Lowest coon ancestor of two nodes python code is the same as the main repository
+This branch has a java program to creates a binary search tree using dynamic input and then returns the Lowest common ancestor of two nodes python code is the same as the main repository
 
 unit:-
 
