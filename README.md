@@ -4,7 +4,9 @@ This repository as of now has 3 branches (All the unit testing for java is done 
 
 Main:-
 
-This branch has the basic static input code for finding LCA in 2 languages java and python
+This branch had the basic static input code for finding LCA in 2 languages java and python.
+
+This branch now consists of my DAG code which is the merged with DAG branch
 
 Edit1:-
 
@@ -27,7 +29,7 @@ I had to implement a completley diffrent code for DAG  as my LCA code used Binar
 
 I have implemented DAG using BFS(Breadth First Search)
 
-I had to implement a completley diffrent code for DAG as my LCA code used Binary search tree dynamically which is completely useless for DAG in every way.
+I had to implement a completley different code for DAG as my LCA code used Binary search tree dynamically which is completely useless for DAG in every way.
 
 I have implemented DAG using BFS(Breadth First Search).
 
